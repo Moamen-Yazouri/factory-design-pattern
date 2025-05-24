@@ -1,10 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-
-        System.out.printf("Hello and welcome!");
-        for (int i = 1; i <= 5; i++) {
-
-            System.out.println("i = " + i);
-        }
+        ShapeFactory factory = new ShapeFactory();
+        IShape  shape1 = factory.getShape("circle");
+        IShape  shape2 = factory.getShape("rectangle");
+        shape1.draw();
+        shape2.draw();
     }
 }
